@@ -1,0 +1,150 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <style>
+        #q {
+            outline-style: solid;
+        }
+
+        .center {
+            text-align: center;
+            margin-top: 100px;
+
+        }
+
+        .box {
+            background-color: #131e2d;
+            opacity: 30;
+            color: whitesmoke;
+            padding: 10px;
+            border: 2px solid gray;
+            margin: 0;
+        }
+        #f{
+            background-color: #131e2d;
+        }
+
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <title>Selecao</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand">Selecao</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'selecao:show_home' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'selecao:about' %}">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'selecao:service' %}">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Team</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown link
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'selecao:create_message' %}">Contact</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'selecao:create_message' %}">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+{% block content %}{% endblock %}
+{% block content1 %}{% endblock %}
+{% block content3 %}{% endblock %}
+
+
+
+<div class="container" >
+    <footer id=f class="bd-footer py-5 mt-5 bg-light" style="background-color: #131e2d">
+        <div class="center py-5">
+            <div class="row">
+                <div class="col-lg-3 mb-3">
+                    <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" href="/"
+                       aria-label="Selecao">
+                        <span class="fs-5">Selecao</span>
+                    </a>
+                    <ul class="list-unstyled small text-muted">
+                        <li class="mb-2">
+                            marker
+                            Desinged and built with all the love in the world by the
+                            <a href="m.amiri1177@gmail.com">M.amiri</a>
+                            with the help of
+                            <a href="m.amiri1177@gmail.com">M.amiri</a>
+                            .
+                        </li>
+                        <li class="mb-2">
+                            marker
+                            Code linsensed
+                            <a href="">Knt</a>
+                            , docs
+                            <a href=" ">CC By 3.0</a>
+                            .
+                        </li>
+                        <li class="mb-2">
+                            marker
+                            Currently v5.0.0
+                        </li>
+                    </ul>
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            marker
+                            <a href=" ">Home</a>
+                        </li>
+                        <li class="mb-2">
+                            marker
+                            <a href=" ">Docs</a>
+                        </li>
+                        <li class="mb-2">
+                            marker
+                            <a href=" ">Examples</a>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="container">
+            <span class="text-muted">Copyright &copy; {{ year }}</span>
+        </div>
+    </footer>
+</div>
+<svg id="wave" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 100" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(243, 106, 62, 1)" offset="0%"></stop><stop stop-color="rgba(19.129, 11, 255, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,80L16,75C32,70,64,60,96,61.7C128,63,160,77,192,78.3C224,80,256,70,288,66.7C320,63,352,67,384,70C416,73,448,77,480,78.3C512,80,544,80,576,70C608,60,640,40,672,31.7C704,23,736,27,768,38.3C800,50,832,70,864,65C896,60,928,30,960,16.7C992,3,1024,7,1056,13.3C1088,20,1120,30,1152,40C1184,50,1216,60,1248,66.7C1280,73,1312,77,1344,65C1376,53,1408,27,1440,25C1472,23,1504,47,1536,58.3C1568,70,1600,70,1632,61.7C1664,53,1696,37,1728,26.7C1760,17,1792,13,1824,13.3C1856,13,1888,17,1920,26.7C1952,37,1984,53,2016,50C2048,47,2080,23,2112,11.7C2144,0,2176,0,2208,13.3C2240,27,2272,53,2288,66.7L2304,80L2304,100L2288,100C2272,100,2240,100,2208,100C2176,100,2144,100,2112,100C2080,100,2048,100,2016,100C1984,100,1952,100,1920,100C1888,100,1856,100,1824,100C1792,100,1760,100,1728,100C1696,100,1664,100,1632,100C1600,100,1568,100,1536,100C1504,100,1472,100,1440,100C1408,100,1376,100,1344,100C1312,100,1280,100,1248,100C1216,100,1184,100,1152,100C1120,100,1088,100,1056,100C1024,100,992,100,960,100C928,100,896,100,864,100C832,100,800,100,768,100C736,100,704,100,672,100C640,100,608,100,576,100C544,100,512,100,480,100C448,100,416,100,384,100C352,100,320,100,288,100C256,100,224,100,192,100C160,100,128,100,96,100C64,100,32,100,16,100L0,100Z"></path></svg>
+</body>
+</html>

@@ -1,0 +1,258 @@
+<html>
+<head>
+
+    <!--suppress CssInvalidPropertyValue -->
+    <style>
+        #q {
+            outline-style: solid;
+        }
+
+        .center {
+            text-align: center;
+            margin-top: 100px;
+
+        }
+
+        .box {
+            background-color: #131e2d;
+            opacity: 30;
+            color: whitesmoke;
+            padding: 10px;
+            border: 2px solid gray;
+            margin: 0;
+        }
+
+
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home</title>
+
+</head>
+
+
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand">Selecao</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'selecao:show_home' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'selecao:about' %}">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href={% url 'selecao:service' %}">Services</a>
+                </li>
+          <li class=" nav-item">
+                    <a class="nav-link" href="#">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Team</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown link
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'selecao:create_message' %}">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="box">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">Selecao</div>
+            <div class="col-sm">
+
+                <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                    <button type="button" class="btn btn-secondary">Home</button>
+                    <button type="button" class="btn btn-secondary">About</button>
+                    <button type="button" class="btn btn-secondary">Services</button>
+                    <button type="button" class="btn btn-secondary">Portfolio</button>
+                    <button type="button" class="btn btn-secondary">Pricing</button>
+                    <button type="button" class="btn btn-secondary">Team</button>
+
+                    <div class="btn-group" role="group">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                            <a class="dropdown-item" href="#">Dropdown link</a>
+                            <a class="dropdown-item" href="#">Dropdown link</a>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-secondary">Contact</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="container">
+                    <h1 class="center">Welcome to Selecao</h1>
+                    <p class="center">Since Bootstrap is developed to be mobile first, we use a handful of media queries
+                        to create sensible breakpoints for our layouts and interfaces. These breakpoints are mostly
+                        based on minimum viewport widths and allow us to scale up elements as the viewport changes.</p>
+                    <div class="center">
+                        <button type="button" class="btn btn-secondary">Read more</button>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <h1 class="center">Welcome to Selecao</h1>
+                    <p class="center">Since Bootstrap is developed to be mobile first, we use a handful of media queries
+                        to create sensible breakpoints for our layouts and interfaces. These breakpoints are mostly
+                        based on minimum viewport widths and allow us to scale up elements as the viewport changes.</p>
+                    <div class="center">
+                        <button type="button" class="btn btn-secondary">Read more</button>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <h1 class="center">Welcome to Selecao</h1>>
+                    <p class="center">Since Bootstrap is developed to be mobile first, we use a handful of media queries
+                        to create sensible breakpoints for our layouts and interfaces. These breakpoints are mostly
+                        based on minimum viewport widths and allow us to scale up elements as the viewport changes.</p>
+                    <div class="center">
+                        <button type="button" class="btn btn-secondary">Read more</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+<svg id="wave" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 150" version="1.1"
+     xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+            <stop stop-color="rgba(7.98, 3.962, 43.714, 1)" offset="0%"></stop>
+            <stop stop-color="rgba(19, 30, 45, 1)" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)"
+          d="M0,60L18.5,60C36.9,60,74,60,111,57.5C147.7,55,185,50,222,52.5C258.5,55,295,65,332,60C369.2,55,406,35,443,42.5C480,50,517,85,554,95C590.8,105,628,90,665,85C701.5,80,738,85,775,82.5C812.3,80,849,70,886,75C923.1,80,960,100,997,107.5C1033.8,115,1071,110,1108,102.5C1144.6,95,1182,85,1218,77.5C1255.4,70,1292,65,1329,52.5C1366.2,40,1403,20,1440,27.5C1476.9,35,1514,70,1551,77.5C1587.7,85,1625,65,1662,67.5C1698.5,70,1735,95,1772,100C1809.2,105,1846,90,1883,75C1920,60,1957,45,1994,50C2030.8,55,2068,80,2105,85C2141.5,90,2178,75,2215,62.5C2252.3,50,2289,40,2326,37.5C2363.1,35,2400,40,2437,45C2473.8,50,2511,55,2548,55C2584.6,55,2622,50,2640,47.5L2658.5,45L2658.5,150L2640,150C2621.5,150,2585,150,2548,150C2510.8,150,2474,150,2437,150C2400,150,2363,150,2326,150C2289.2,150,2252,150,2215,150C2178.5,150,2142,150,2105,150C2067.7,150,2031,150,1994,150C1956.9,150,1920,150,1883,150C1846.2,150,1809,150,1772,150C1735.4,150,1698,150,1662,150C1624.6,150,1588,150,1551,150C1513.8,150,1477,150,1440,150C1403.1,150,1366,150,1329,150C1292.3,150,1255,150,1218,150C1181.5,150,1145,150,1108,150C1070.8,150,1034,150,997,150C960,150,923,150,886,150C849.2,150,812,150,775,150C738.5,150,702,150,665,150C627.7,150,591,150,554,150C516.9,150,480,150,443,150C406.2,150,369,150,332,150C295.4,150,258,150,222,150C184.6,150,148,150,111,150C73.8,150,37,150,18,150L0,150Z"></path>
+    <defs>
+        <linearGradient id="sw-gradient-1" x1="0" x2="0" y1="1" y2="0">
+            <stop stop-color="rgba(19, 30, 45, 1)" offset="0%"></stop>
+            <stop stop-color="rgba(19, 30, 45, 1)" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <path style="transform:translate(0, 50px); opacity:0.9" fill="url(#sw-gradient-1)"
+          d="M0,75L18.5,82.5C36.9,90,74,105,111,107.5C147.7,110,185,100,222,80C258.5,60,295,30,332,15C369.2,0,406,0,443,0C480,0,517,0,554,12.5C590.8,25,628,50,665,65C701.5,80,738,85,775,87.5C812.3,90,849,90,886,80C923.1,70,960,50,997,52.5C1033.8,55,1071,80,1108,77.5C1144.6,75,1182,45,1218,50C1255.4,55,1292,95,1329,95C1366.2,95,1403,55,1440,37.5C1476.9,20,1514,25,1551,30C1587.7,35,1625,40,1662,35C1698.5,30,1735,15,1772,30C1809.2,45,1846,90,1883,102.5C1920,115,1957,95,1994,72.5C2030.8,50,2068,25,2105,35C2141.5,45,2178,90,2215,97.5C2252.3,105,2289,75,2326,62.5C2363.1,50,2400,55,2437,67.5C2473.8,80,2511,100,2548,110C2584.6,120,2622,120,2640,120L2658.5,120L2658.5,150L2640,150C2621.5,150,2585,150,2548,150C2510.8,150,2474,150,2437,150C2400,150,2363,150,2326,150C2289.2,150,2252,150,2215,150C2178.5,150,2142,150,2105,150C2067.7,150,2031,150,1994,150C1956.9,150,1920,150,1883,150C1846.2,150,1809,150,1772,150C1735.4,150,1698,150,1662,150C1624.6,150,1588,150,1551,150C1513.8,150,1477,150,1440,150C1403.1,150,1366,150,1329,150C1292.3,150,1255,150,1218,150C1181.5,150,1145,150,1108,150C1070.8,150,1034,150,997,150C960,150,923,150,886,150C849.2,150,812,150,775,150C738.5,150,702,150,665,150C627.7,150,591,150,554,150C516.9,150,480,150,443,150C406.2,150,369,150,332,150C295.4,150,258,150,222,150C184.6,150,148,150,111,150C73.8,150,37,150,18,150L0,150Z"></path>
+    <defs>
+        <linearGradient id="sw-gradient-2" x1="0" x2="0" y1="1" y2="0">
+            <stop stop-color="rgba(19, 30, 45, 1)" offset="0%"></stop>
+            <stop stop-color="rgba(19, 30, 45, 1)" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <path style="transform:translate(0, 100px); opacity:0.8" fill="url(#sw-gradient-2)"
+          d="M0,135L18.5,117.5C36.9,100,74,65,111,50C147.7,35,185,40,222,52.5C258.5,65,295,85,332,87.5C369.2,90,406,75,443,62.5C480,50,517,40,554,52.5C590.8,65,628,100,665,107.5C701.5,115,738,95,775,72.5C812.3,50,849,25,886,20C923.1,15,960,30,997,32.5C1033.8,35,1071,25,1108,22.5C1144.6,20,1182,25,1218,27.5C1255.4,30,1292,30,1329,47.5C1366.2,65,1403,100,1440,100C1476.9,100,1514,65,1551,45C1587.7,25,1625,20,1662,32.5C1698.5,45,1735,75,1772,85C1809.2,95,1846,85,1883,75C1920,65,1957,55,1994,50C2030.8,45,2068,45,2105,60C2141.5,75,2178,105,2215,110C2252.3,115,2289,95,2326,87.5C2363.1,80,2400,85,2437,92.5C2473.8,100,2511,110,2548,102.5C2584.6,95,2622,70,2640,57.5L2658.5,45L2658.5,150L2640,150C2621.5,150,2585,150,2548,150C2510.8,150,2474,150,2437,150C2400,150,2363,150,2326,150C2289.2,150,2252,150,2215,150C2178.5,150,2142,150,2105,150C2067.7,150,2031,150,1994,150C1956.9,150,1920,150,1883,150C1846.2,150,1809,150,1772,150C1735.4,150,1698,150,1662,150C1624.6,150,1588,150,1551,150C1513.8,150,1477,150,1440,150C1403.1,150,1366,150,1329,150C1292.3,150,1255,150,1218,150C1181.5,150,1145,150,1108,150C1070.8,150,1034,150,997,150C960,150,923,150,886,150C849.2,150,812,150,775,150C738.5,150,702,150,665,150C627.7,150,591,150,554,150C516.9,150,480,150,443,150C406.2,150,369,150,332,150C295.4,150,258,150,222,150C184.6,150,148,150,111,150C73.8,150,37,150,18,150L0,150Z"></path>
+</svg>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+<div class="container">
+    <footer class="bd-footer py-5 mt-5 bg-light">
+        <div class="center py-5">
+            <div class="row">
+                <div class="col-lg-3 mb-3">
+                    <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" href="/"
+                       aria-label="Selecao">
+                        <span class="fs-5">Selecao</span>
+                    </a>
+                    <ul class="list-unstyled small text-muted">
+                        <li class="mb-2">
+                            ::marker
+                            Desinged and built with all the love in the world by the
+                            <a href="m.amiri1177@gmail.com">M.amiri</a>
+                            with the help of
+                            <a href="m.amiri1177@gmail.com">M.amiri</a>
+                            .
+                        </li>
+                        <li class="mb-2">
+                            ::marker
+                            Code linsensed
+                            <a href="">Knt</a>
+                            , docs
+                            <a href=" ">CC By 3.0</a>
+                            .
+                        </li>
+                        <li class="mb-2">
+                            ::marker
+                            Currently v5.0.0
+                        </li>
+                    </ul>
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            ::marker
+                            <a href=" ">Home</a>
+                        </li>
+                        <li class="mb-2">
+                            ::marker
+                            <a href=" ">Docs</a>
+                        </li>
+                        <li class="mb-2">
+                            ::marker
+                            <a href=" ">Examples</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <span class="text-muted">Copyright &copy; {{ year }}</span>
+        </div>
+    </footer>
+</div>
+</body>
+
+</html>
