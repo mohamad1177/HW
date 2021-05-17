@@ -3,5 +3,6 @@ from . import models
 
 
 admin.site.register([
-    models.Message
+    models.Message,
+    models.Post
 ])

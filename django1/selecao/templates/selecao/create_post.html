@@ -1,0 +1,30 @@
+{% extends 'selecao/base.html' %}
+{% block page_header_title %}
+    🆕 Create a new post
+{% endblock %}
+{% block content %}
+    <div class="col-12">
+        <h3>🆕 Create a new post</h3>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="title">عنوان پست</label>
+                <input type="text" id="title" class="form-control" name="title">
+            </div>
+            <div class="form-group">
+                <label for="content">متن پست</label>
+                <textarea name="content" id="content" cols="50" rows="10" class="form-control"></textarea>
+            </div>
+            <div class="form-group">
+                {{ form.intro_image }}
+            </div>
+            <div class="form-group">
+                <label for="creator">کاربر ثبت کننده</label>
+                <select id="creator" name="creator" class="form-control">
+                    <option value="1">Alireza</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Create the post</button>
+        </form>
+    </div>
+{% endblock %}
