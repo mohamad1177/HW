@@ -75,7 +75,7 @@ def create_post(request):
         form_instance = forms.PostForm(data=request.POST, files=request.FILES)
         if form_instance.is_valid():
             form_instance.save()
-            return redirect('selecao:create-post:show-all-posts')
+            return redirect('selecao:create-post:home')
 
     return render(request, 'selecao/create_post.html', {
         'form': form_instance,

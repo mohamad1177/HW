@@ -23,7 +23,7 @@ class Post(models.Model):
     content = models.TextField(verbose_name='content', null=True)
     title = models.CharField(max_length=100, verbose_name='title')
     intro_image = models.ImageField(verbose_name='intro image', blank=True, null=True)
-    show_post = models.BooleanField(verbose_name='show post')
+    show_post = models.BooleanField(verbose_name='show post', blank=True, null=True)
 
 
     class Meta:

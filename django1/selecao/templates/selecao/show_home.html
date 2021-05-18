@@ -24,6 +24,7 @@
 
 
     </style>
+      <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <meta charset="utf-8">
@@ -55,7 +56,7 @@
                     <a class="nav-link" href={% url 'selecao:service' %}">Services</a>
                 </li>
                 <li class=" nav-item">
-                    <a class="nav-link" href="#">Portfolio</a>
+                    <a class="nav-link" href="{% url 'selecao:create-post' %}">Create Post</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Pricing</a>
@@ -118,10 +119,22 @@
     </div>
 
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-
         <div class="carousel-inner ">
-        {% for post in my_posts %}
-                <div class="carousel-item active">
+        <div class="carousel-item active">
+            <div class="container">
+
+                <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Selecao</span></h2>
+                <p class="animate__animated fanimate__adeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi
+                    ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea
+                    voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi
+                    architecto.</p>
+                <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+
+        </div>
+        </div>
+
+            {% for post in my_posts %}
+                <div class="carousel-item ">
 
                     <div class="container">
 
@@ -130,7 +143,7 @@
                             {# One single post #}
                             <div class="col-md-4">
                                 {% if post.intro_image %}
-                                    <img src="{{ post.intro_image.url }}" class="img-fluid">
+                                    <img src="{{ post.intro_image.url }}" class="img-thumbnail">
                                 {% endif %}
                                 <h2>{{ post.title }}</h2>
                                 <h6>{{ post.created_date }}</h6>
@@ -147,7 +160,7 @@
                     </div>
 
                 </div>
-                {% endfor %}
+            {% endfor %}
 
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
